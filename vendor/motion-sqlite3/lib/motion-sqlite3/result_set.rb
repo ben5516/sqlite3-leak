@@ -1,7 +1,7 @@
 module SQLite3
   class ResultSet
     def initialize(statement, handle)
-      @statement = statement
+      @statement = WeakRef.new(statement)
       @handle = handle
     end
 

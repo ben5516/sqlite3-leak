@@ -1,7 +1,7 @@
 module SQLite3
   class Statement
     def initialize(db, sql, params)
-      @db = db
+      @db = WeakRef.new(db)
       @handle = Pointer.new(::Sqlite3_stmt.type)
       @result = nil
 
