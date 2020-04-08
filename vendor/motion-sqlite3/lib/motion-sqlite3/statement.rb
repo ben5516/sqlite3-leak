@@ -16,7 +16,7 @@ module SQLite3
     def execute
       step
 
-      ResultSet.new(self, @handle)
+      ResultSet.new(self, @handle.value)
     end
 
     def finalize
