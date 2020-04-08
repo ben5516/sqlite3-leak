@@ -20,6 +20,8 @@ class AppDelegate
           str1 VARCHAR(255),
           str2 VARCHAR(255)
       );
+
+      delete from test;
     SQL
 
     @q = Dispatch::Queue.new("db stuff")
